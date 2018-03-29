@@ -1,0 +1,8 @@
+Mastercard;51;16;
+Mastercard;52;16;
+Mastercard;53;16;
+Mastercard;54;16;
+Mastercard;55;16;
+Visa;4;16;
+AmericanExpress;34;15;
+AmericanExpress;37;15;
