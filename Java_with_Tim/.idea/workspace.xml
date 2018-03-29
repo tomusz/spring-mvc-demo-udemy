@@ -145,6 +145,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../validator" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -372,12 +373,12 @@
       <workItem from="1517596992400" duration="1800000" />
       <workItem from="1517906006733" duration="728000" />
       <workItem from="1518340453760" duration="389000" />
-      <workItem from="1522349005697" duration="1211000" />
+      <workItem from="1522349005697" duration="1662000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18485000" />
+    <option name="totallyTimeSpent" value="18936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
