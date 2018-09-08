@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class TennisCoach implements Coach{
 
-    @Autowired
-    @Qualifier("randomFortuneService")
+/*    @Autowired
+    @Qualifier("randomFortuneService")*/
     private FortuneService fortuneService;
 
 //    @Autowired //- constructor injection
@@ -23,11 +23,11 @@ public class TennisCoach implements Coach{
     }
 
     //define a setter method
-//    @Autowired - setter or any method injection
-//    public void setFortuneService(FortuneService fortuneService) {
-//        System.out.println("TennisCoach: inside setFortuneService");
-//        this.fortuneService = fortuneService;
-//    }
+    @Autowired //- setter or any method injection
+    public void setFortuneService(@Qualifier("randomFortuneService") FortuneService fortuneService) {
+        System.out.println("TennisCoach: inside setFortuneService");
+        this.fortuneService = fortuneService;
+    }
 
     @Override
     public String getDailyWorkout() {
