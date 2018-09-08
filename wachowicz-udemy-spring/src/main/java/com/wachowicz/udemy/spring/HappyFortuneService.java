@@ -1,5 +1,6 @@
 package com.wachowicz.udemy.spring;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component

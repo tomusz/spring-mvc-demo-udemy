@@ -1,15 +1,18 @@
 package com.wachowicz.udemy.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach{
 
     @Autowired
+    @Qualifier("randomFortuneService")
     private FortuneService fortuneService;
 
-//    @Autowired - constructor injection
+//    @Autowired //- constructor injection
+//
 //    public TennisCoach(FortuneService fortuneService) {
 //        this.fortuneService = fortuneService;
 //    }
