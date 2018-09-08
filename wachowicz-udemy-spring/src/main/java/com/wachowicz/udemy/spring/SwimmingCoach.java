@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class SwimmingCoach implements Coach{
 
     @Autowired
-    @Qualifier("happyFortuneService")
+    @Qualifier("arrayFortuneService")
     private FortuneService fortuneService;
 
     @Value("${foo.email}")
