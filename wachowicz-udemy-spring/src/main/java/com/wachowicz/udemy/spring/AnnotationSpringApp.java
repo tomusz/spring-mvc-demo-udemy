@@ -15,7 +15,9 @@ public class AnnotationSpringApp {
         //call a method on the bean
         System.out.println(coach.getDailyWorkout());
         System.out.println(swimmingCoach.getDailyWorkout());
-
+        //call method to get daily fortune
+        System.out.println(coach.getDailyFortune());
+        System.out.println(swimmingCoach.getDailyFortune());
         //close the context
         context.close();
     }
