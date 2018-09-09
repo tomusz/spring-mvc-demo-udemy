@@ -3,6 +3,7 @@ package com.wachowicz.udemy.spring;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,21 +12,23 @@ import java.util.Random;
 @Component
 public class ArrayFortuneService implements FortuneService{
 
-    //BufferReader
+    //BufferReader /home/tomasz/IdeaProjects/wachowicz-udemy-spring/src/main/resources/array-file.txt
     private String fileName = "/home/tomasz/IdeaProjects/wachowicz-udemy-spring/src/main/resources/array-file.txt";
     private List<String> theFortunes;
 
-
-
     private Random random = new Random();
 
+    public ArrayFortuneService(){
+
+    }
 
 
-    public ArrayFortuneService() throws IOException {
+    @PostConstruct
+    public void loadArrayFortuneService() throws IOException {
 
         File theFile = new File(fileName);
 
-        System.out.println("Reading fortunes from file: " + theFile);
+        System.out.println("Reading fortunes from file: " + theFile.getName());
         System.out.println("File exists: " + theFile.exists());
 
         // initialize array list
@@ -33,8 +36,12 @@ public class ArrayFortuneService implements FortuneService{
         theFortunes = new ArrayList<String>();
 
         // read fortunes from file
+
+
+
         try {
-            BufferedReader br = new BufferedReader(new FileReader(theFile));
+            BufferedReader br = new BufferedReader(
+                    new FileReader(theFile));
             String tempLine;
 
             while ((tempLine = br.readLine()) != null) {
@@ -47,9 +54,6 @@ public class ArrayFortuneService implements FortuneService{
 
 
     }
-
-
-    // read fortunes from file
 
     @Override
     public String getFortune() {
