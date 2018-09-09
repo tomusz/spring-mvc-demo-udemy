@@ -1,5 +1,7 @@
 package com.wachowicz.udemy.spring.config;
 
+import com.wachowicz.udemy.spring.coaches.GymCoach;
+import com.wachowicz.udemy.spring.fortuneServices.ChampionFortuneService;
 import com.wachowicz.udemy.spring.interfaces.Coach;
 import com.wachowicz.udemy.spring.interfaces.FortuneService;
 import com.wachowicz.udemy.spring.coaches.KayakCoach;
@@ -20,10 +22,23 @@ public class SportConfig {
         return new SadFortuneService();
     }
 
+    //define bean for champion fortune service
+    @Bean
+    public FortuneService championFortuneService(){
+        return new ChampionFortuneService();
+    }
+
     //define bean for our kayak coach AND inject dependency
 
     @Bean
     public Coach kayakCoach(FortuneService sadFortuneService){
         return new KayakCoach(sadFortuneService);
+    }
+
+    //define bean for GymCoach and inject dependency
+
+    @Bean
+    public Coach gymCoach(FortuneService championFortuneService){
+        return new GymCoach(championFortuneService);
     }
 }
