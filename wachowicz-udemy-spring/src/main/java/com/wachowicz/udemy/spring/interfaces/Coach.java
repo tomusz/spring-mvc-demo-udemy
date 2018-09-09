@@ -1,4 +1,4 @@
-package com.wachowicz.udemy.spring;
+package com.wachowicz.udemy.spring.interfaces;
 
 public interface Coach {
 

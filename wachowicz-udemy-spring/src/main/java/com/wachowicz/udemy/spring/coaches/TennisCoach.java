@@ -1,8 +1,9 @@
-package com.wachowicz.udemy.spring;
+package com.wachowicz.udemy.spring.coaches;
 
+import com.wachowicz.udemy.spring.interfaces.Coach;
+import com.wachowicz.udemy.spring.interfaces.FortuneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -10,7 +11,7 @@ import javax.annotation.PreDestroy;
 
 @Component
 //@Scope("prototype")
-public class TennisCoach implements Coach{
+public class TennisCoach implements Coach {
 
 /*    @Autowired
     @Qualifier("randomFortuneService")*/

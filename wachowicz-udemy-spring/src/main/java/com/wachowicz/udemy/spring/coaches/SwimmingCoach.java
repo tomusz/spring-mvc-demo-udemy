@@ -1,12 +1,14 @@
-package com.wachowicz.udemy.spring;
+package com.wachowicz.udemy.spring.coaches;
 
+import com.wachowicz.udemy.spring.interfaces.Coach;
+import com.wachowicz.udemy.spring.interfaces.FortuneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-public class SwimmingCoach implements Coach{
+public class SwimmingCoach implements Coach {
 
     @Autowired
     @Qualifier("arrayFortuneService")

@@ -1,6 +1,6 @@
-package com.wachowicz.udemy.spring;
+package com.wachowicz.udemy.spring.fortuneServices;
 
-import org.springframework.beans.factory.annotation.Value;
+import com.wachowicz.udemy.spring.interfaces.FortuneService;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Random;
 
 @Component
-public class ArrayFortuneService implements FortuneService{
+public class ArrayFortuneService implements FortuneService {
 
     //BufferReader /home/tomasz/IdeaProjects/wachowicz-udemy-spring/src/main/resources/array-file.txt
     private String fileName = "/home/tomasz/IdeaProjects/wachowicz-udemy-spring/src/main/resources/array-file.txt";

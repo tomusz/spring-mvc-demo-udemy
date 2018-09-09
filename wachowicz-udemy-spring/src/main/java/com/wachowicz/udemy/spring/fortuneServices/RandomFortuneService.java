@@ -1,11 +1,12 @@
-package com.wachowicz.udemy.spring;
+package com.wachowicz.udemy.spring.fortuneServices;
 
+import com.wachowicz.udemy.spring.interfaces.FortuneService;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
 @Component
-public class RandomFortuneService implements FortuneService{
+public class RandomFortuneService implements FortuneService {
 
     //create array of string
     private String[] data ={

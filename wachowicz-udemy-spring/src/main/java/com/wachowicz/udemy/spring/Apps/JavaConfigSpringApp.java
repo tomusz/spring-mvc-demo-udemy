@@ -1,14 +1,17 @@
-package com.wachowicz.udemy.spring;
+package com.wachowicz.udemy.spring.Apps;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import com.wachowicz.udemy.spring.interfaces.Coach;
+import com.wachowicz.udemy.spring.coaches.SwimmingCoach;
+import com.wachowicz.udemy.spring.config.SportConfig;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class AnnotationSpringApp {
+public class JavaConfigSpringApp {
 
     public static void main(String[] args) {
 
-        // read spring config file
-        ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("applicationContext.xml");
+        // read spring config java class
+        AnnotationConfigApplicationContext context =
+                new AnnotationConfigApplicationContext(SportConfig.class);
         //get the bean from spring container
         Coach coach = context.getBean("tennisCoach",Coach.class);
         SwimmingCoach swimmingCoach = context.getBean("swimmingCoach",SwimmingCoach.class);

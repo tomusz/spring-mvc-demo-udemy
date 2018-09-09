@@ -1,5 +1,7 @@
-package com.wachowicz.udemy.spring;
+package com.wachowicz.udemy.spring.Apps;
 
+import com.wachowicz.udemy.spring.interfaces.Coach;
+import com.wachowicz.udemy.spring.coaches.TennisCoach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class AnnotationBeanScopeDemoApp {
