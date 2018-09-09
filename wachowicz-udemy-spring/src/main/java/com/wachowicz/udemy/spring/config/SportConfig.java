@@ -7,8 +7,10 @@ import com.wachowicz.udemy.spring.fortuneServices.SadFortuneService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
+@PropertySource("sport.properties")
 //@ComponentScan("com.wachowicz.udemy.spring")
 public class SportConfig {
 
