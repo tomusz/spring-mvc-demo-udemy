@@ -7,11 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="udemywithhibernate" />
-        <module name="wachowicz-udemy-spring" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="udemywithhibernate" target="1.8" />
+      <module name="wachowicz-udemy-spring" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
